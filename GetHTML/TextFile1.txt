@@ -1,0 +1,104 @@
+﻿       #region 废弃======
+        //public IDictionary<string, string> GetListFromDataTable(string strExcel, CommonSpace.ExcelVersions ex)
+        //{
+        //    if (File.Exists(strExcel))
+        //    {
+        //        DataTable dt = CommonSpace.Conmmon.ExcelToDataTable(strExcel, "Sheet1", ex);
+        //        if (dt != null && dt.Rows.Count > 0)
+        //        {
+        //            foreach (DataRow dr in dt.Rows)
+        //            {
+        //                urlKeywords.Add(dr[0].ToString(), dr[1].ToString());
+        //            }
+        //        }
+        //    }
+
+        //    return urlKeywords;
+        //} 
+        #endregion
+
+        #region 暂时不用
+        //private void btnGet_Click(object sender, EventArgs e)
+        //{
+        //    if (this.txtUrl.Text == "")
+        //    {
+        //        return;
+        //    }
+        //    DateTime dtNow = DateTime.Now;
+        //    string strHTML = "";
+        //    switch (this.tabControl1.SelectedTab.Text)
+        //    {
+        //        case "WebClient":
+        //            strHTML = Google_getProductNum(GetWebClient(this.txtUrl.Text));
+        //            break;
+        //        case "WebRequest":
+        //            strHTML = GetWebRequest(this.txtUrl.Text);
+        //            break;
+        //        case "HttpWebRequest":
+        //            strHTML = GetHttpWebRequest(this.txtUrl.Text);
+        //            break;
+        //        default:
+        //            break;
+        //    }
+
+        //    TimeSpan span = DateTime.Now - dtNow;
+        //    MessageBox.Show("用时：[" + span.ToString() + "]");
+        //    System.IO.File.WriteAllText(savePath, strHTML, System.Text.Encoding.GetEncoding(this.txtEncoder.Text));
+        //    System.Diagnostics.Process.Start(savePath);
+        //}
+        //private void btnSend_Click(object sender, EventArgs e)
+        //{
+        //    MailMessage mailMessage = new MailMessage();
+        //    mailMessage.To.Add(this.txtTo.Text);
+        //    mailMessage.From = new System.Net.Mail.MailAddress(this.txtFrom.Text);
+        //    mailMessage.Subject = this.txtTitle.Text;
+        //    mailMessage.Body = this.txtContent.Text;
+        //    mailMessage.IsBodyHtml = true;
+        //    mailMessage.BodyEncoding = System.Text.Encoding.UTF8;
+        //    mailMessage.Priority = System.Net.Mail.MailPriority.Normal;
+
+        //    SmtpClient smtpClient = new SmtpClient();
+        //    smtpClient.Credentials = new System.Net.NetworkCredential(mailMessage.From.Address, this.txtPassword.Text);
+        //    smtpClient.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
+        //    smtpClient.Host = "smtp." + mailMessage.From.Host;
+        //    smtpClient.Port = 25;
+        //    smtpClient.Timeout = 3000;
+        //    smtpClient.EnableSsl = false;
+        //    smtpClient.Send(mailMessage);
+        //}
+        #endregion
+
+        #region 单个查询1.0
+        //public void SearchKeySingle(string strKeywods)
+        //{
+        //    if (strKeywods == "")
+        //    {
+        //        return;
+        //    }
+
+        //    //先清除显示结果
+        //    this.txtResult.Text = "";
+
+        //    string strURI = string.Empty;
+
+        //    int num = 0;
+        //    string strResult = string.Empty;
+        //    string temp = string.Empty;
+
+        //    strURI = this.strGoogleUrl + GetString(strKeywods);
+        //    temp = Google_getProductNum(GetWebClient(strURI));
+
+        //    num = (temp == string.Empty ? 0 : Convert.ToInt32(temp));
+
+        //    if (num == 0)
+        //    {
+        //        strResult = "没有收录";
+        //    }
+        //    else
+        //    {
+        //        strResult = num.ToString();
+        //    }
+
+        //    this.txtResult.AppendText(strKeywods + "\t-" + "结果数：\r\t" + strResult);
+        //} 
+        #endregion
